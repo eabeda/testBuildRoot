@@ -1,8 +1,9 @@
 #! /bin/bash
 
+cp config_files/main_defconfig buildroot/.config
 cd buildroot/
-make qemu_arm_versatile_defconfig
-make menuconfig
+#make qemu_arm_versatile_defconfig
+#make menuconfig
 #make linux-menuconfig
 #make busybox-menuconfig
 #make help
