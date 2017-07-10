@@ -1,7 +1,5 @@
 #! /bin/bash
 
-cp config_files/main_defconfig buildroot/.config
-cp config_files/u-boot_defconfig buildroot/U-Boot_defconfig
 cd buildroot/
 make qemu_arm_versatile_defconfig
 make menuconfig
@@ -10,6 +8,10 @@ make menuconfig
 #make help
 make
 qemu-system-arm -M versatilepb -kernel output/images/zImage -dtb output/images/versatile-pb.dtb -drive file=output/images/rootfs.ext2,if=scsi -append "root=/dev/sda console=ttyAMA0,115200" -nographic
+
+# #Config
+# cp config_files/main_defconfig buildroot/.config
+# cp config_files/u-boot_defconfig buildroot/U-Boot_defconfig
 
 # #Modules (already integrated in zImage)
 # cd output/build/linux-4.11.3
