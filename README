@@ -1,0 +1,14 @@
+
+#Git
+git init
+git add *
+git commit -m "first commit"
+git remote add origin https://github.com/eabeda/testBuildRoot.git
+git push -u origin master
+
+
+#Manual
+http://buildroot.uclibc.org/downloads/manual/manual.html
+
+#Tuto
+http://pressreset.net/2013/09/buildroot-and-qemu-the-quickest-receipe-for-your-own-linux/
