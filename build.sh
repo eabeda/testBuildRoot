@@ -1,5 +1,7 @@
 #! /bin/bash
 
+cp config_files/main_defconfig buildroot/.config
+cp config_files/u-boot_defconfig buildroot/U-Boot_defconfig
 cd buildroot/
 make qemu_arm_versatile_defconfig
 make menuconfig
